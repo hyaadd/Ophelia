@@ -2,7 +2,10 @@
 
 Open a terminal and execute the commands below:
 
-1. Install [meteor](https://www.meteor.com/):
+1. Install [Nodejs, meteor, Mongodb]
+https://nodejs.org/en/
+https://www.meteor.com/
+https://docs.mongodb.com/manual/installation/
 
 > $ `curl https://install.meteor.com/ | sh`
 
@@ -10,7 +13,7 @@ Open a terminal and execute the commands below:
 
 2. Clone this repository:
 
-> $ `git clone https://github.com/derek-fong/angular2-meteor-boilerplate.git`
+> $ `git clone https://github.com/karandeepsinghexpert/ophelia-ui.webflow.git`
 
 3. Change directory into cloned folder and install NPM packages:
 
