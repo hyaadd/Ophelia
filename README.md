@@ -2,10 +2,12 @@
 
 Open a terminal and execute the commands below:
 
-1. Install [Nodejs, meteor, Mongodb]
-https://nodejs.org/en/
-https://www.meteor.com/
-https://docs.mongodb.com/manual/installation/
+1. Install [Nodejs, meteor, Mongodb]:
+> https://nodejs.org/en/
+
+> https://www.meteor.com/
+
+> https://docs.mongodb.com/manual/installation/
 
 > $ `curl https://install.meteor.com/ | sh`
 
