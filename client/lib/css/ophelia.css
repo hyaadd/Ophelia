@@ -537,7 +537,12 @@ ul {
     transition: all 250ms ease;
     text-transform: lowercase;
 }
-
+.commands-input{
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  text-transform: none;
+  white-space: pre;
+}
 .input-text.command {
     color: #ff006c;
     font-weight: 700;
