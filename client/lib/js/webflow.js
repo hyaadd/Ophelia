@@ -30,16 +30,325 @@ t.exports=function(){var t={};t.VERSION="1.6.0-Webflow";var e={},n=Array.prototy
  * ----------------------------------------------------------------------
  * Webflow: Interactions: Init
  */
-Webflow.require('ix').init([
-  {"slug":"cursor","name":"cursor","value":{"style":{},"triggers":[{"type":"load","loopA":true,"stepsA":[{"opacity":0,"transition":"opacity 500ms ease 0"},{"opacity":1,"transition":"opacity 500ms ease 0"}],"stepsB":[]}]}},
-  {"slug":"input","name":"input","value":{"style":{"display":"none","x":"0px","y":"-100%","z":"0px"},"triggers":[]}},
-  {"slug":"input-text","name":"input text","value":{"style":{"display":"none","opacity":0,"width":"0px"},"triggers":[]}},
-  {"slug":"placeholder-text","name":"Placeholder text","value":{"style":{"display":"block","opacity":1},"triggers":[]}},
-  {"slug":"shift","name":"shift","value":{"style":{},"triggers":[{"type":"click","selector":".big-caps","stepsA":[{"display":"flex"}],"stepsB":[{"display":"none"}]},{"type":"click","selector":".small-caps","stepsA":[{"display":"none"}],"stepsB":[{"display":"flex"}]}]}},
-  {"slug":"keyboard","name":"keyboard","value":{"style":{"display":"none","opacity":0,"height":"0px"},"triggers":[]}},
-  {"slug":"show-numerical-keyboard","name":"show numerical keyboard","value":{"style":{},"triggers":[{"type":"click","selector":".alphabeticals-wrapper","stepsA":[{"display":"none"}],"stepsB":[{"display":"block"}]},{"type":"click","selector":".numerical-wrapper","stepsA":[{"display":"block"}],"stepsB":[{"display":"none"}]},{"type":"click","selector":".show-123","stepsA":[{"display":"none"}],"stepsB":[{"display":"flex"}]},{"type":"click","selector":".show-abc","stepsA":[{"display":"flex"}],"stepsB":[{"display":"none"}]}]}},
-  {"slug":"numerical-keyboard","name":"numerical keyboard","value":{"style":{"display":"none"},"triggers":[]}},
-  {"slug":"show-main-keyboard","name":"show main keyboard","value":{"style":{},"triggers":[{"type":"click","selector":".buttons-and-main-keyboard-wrapper","stepsA":[{"display":"block"},{"opacity":1,"height":"auto","transition":"height 250ms ease 0, opacity 500ms ease 0"}],"stepsB":[{"display":"block"},{"opacity":1,"height":"auto","transition":"height 250ms ease 0, opacity 500ms ease 0"}]},{"type":"click","selector":".input-text","stepsA":[{"display":"block"},{"opacity":1,"width":"auto","transition":"opacity 250ms ease 0, width 250ms ease 0"}],"stepsB":[{"display":"block"},{"opacity":1,"width":"auto","transition":"opacity 250ms ease 0, width 250ms ease 0"}]},{"type":"click","selector":".placeholder-n-recommendation-text","stepsA":[{"display":"none"},{"opacity":0,"transition":"opacity 250ms ease 0"}],"stepsB":[{"display":"none"},{"opacity":0,"transition":"opacity 250ms ease 0"}]},{"type":"click","selector":".message-list","stepsA":[{"opacity":0.25,"transition":"opacity 250ms ease 0"}],"stepsB":[{"opacity":0.25,"transition":"opacity 250ms ease 0"}]},{"type":"click","selector":".pop-up-wrapper","stepsA":[{"wait":"1000ms"},{"display":"flex"},{"opacity":1,"height":"auto","transition":"height 250ms ease 0, opacity 500ms ease 0"},{"wait":"2500ms"},{"opacity":0,"height":"0px","transition":"height 250ms ease 0, opacity 125ms ease 0"},{"display":"none"}],"stepsB":[{"wait":"1000ms"},{"display":"flex"},{"opacity":1,"height":"auto","transition":"height 250ms ease 0, opacity 500ms ease 0"},{"wait":"2500ms"},{"opacity":0,"height":"0px","transition":"opacity 125ms ease 0, height 250ms ease 0"},{"display":"none"}]}]}},
-  {"slug":"close-main-keyboard","name":"close main keyboard","value":{"style":{},"triggers":[{"type":"click","selector":".buttons-and-main-keyboard-wrapper","stepsA":[{"opacity":0,"height":"0px","transition":"height 250ms ease 0, opacity 125ms ease 0"},{"display":"none"}],"stepsB":[{"opacity":0,"height":"0px","transition":"height 250ms ease 0, opacity 125ms ease 0"},{"display":"none"}]},{"type":"click","selector":".input-text","stepsA":[{"opacity":0,"width":"0px","transition":"opacity 250ms ease 0, width 250ms ease 0"},{"display":"none"}],"stepsB":[{"opacity":0,"width":"0px","transition":"opacity 250ms ease 0, width 250ms ease 0"},{"display":"none"}]},{"type":"click","selector":".placeholder-n-recommendation-text","stepsA":[{"opacity":1,"transition":"opacity 250ms ease 0"},{"display":"block"}],"stepsB":[{"opacity":1,"transition":"opacity 250ms ease 0"},{"display":"block"}]},{"type":"click","selector":".message-list","stepsA":[{"opacity":1,"transition":"opacity 250ms ease 0"}],"stepsB":[{"opacity":1,"transition":"opacity 250ms ease 0"}]}]}},
-  {"slug":"pop-up-wrapper","name":"pop up wrapper","value":{"style":{"display":"none","opacity":0,"height":"0px"},"triggers":[]}}
+Webflow.require('ix').init([{
+    "slug": "cursor",
+    "name": "cursor",
+    "value": {
+      "style": {},
+      "triggers": []
+    }
+  },
+  {
+    "slug": "input",
+    "name": "input",
+    "value": {
+      "style": {
+        "display": "none",
+        "x": "0px",
+        "y": "-100%",
+        "z": "0px"
+      },
+      "triggers": []
+    }
+  },
+  {
+    "slug": "input-text",
+    "name": "input text",
+    "value": {
+      "style": {
+        "display": "none",
+        "opacity": 0,
+        "width": "0px"
+      },
+      "triggers": []
+    }
+  },
+  {
+    "slug": "placeholder-text",
+    "name": "Placeholder text",
+    "value": {
+      "style": {
+        "display": "block",
+        "opacity": 1
+      },
+      "triggers": []
+    }
+  },
+  {
+    "slug": "shift",
+    "name": "shift",
+    "value": {
+      "style": {},
+      "triggers": [{
+        "type": "click",
+        "selector": ".big-caps",
+        "stepsA": [{
+          "display": "flex"
+        }],
+        "stepsB": [{
+          "display": "none"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".small-caps",
+        "stepsA": [{
+          "display": "none"
+        }],
+        "stepsB": [{
+          "display": "flex"
+        }]
+      }]
+    }
+  },
+  {
+    "slug": "keyboard",
+    "name": "keyboard",
+    "value": {
+      "style": {
+        "display": "none",
+        "opacity": 0,
+        "height": "0px"
+      },
+      "triggers": []
+    }
+  },
+  {
+    "slug": "show-numerical-keyboard",
+    "name": "show numerical keyboard",
+    "value": {
+      "style": {},
+      "triggers": [{
+        "type": "click",
+        "selector": ".alphabeticals-wrapper",
+        "stepsA": [{
+          "display": "none"
+        }],
+        "stepsB": [{
+          "display": "block"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".numerical-wrapper",
+        "stepsA": [{
+          "display": "block"
+        }],
+        "stepsB": [{
+          "display": "none"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".show-123",
+        "stepsA": [{
+          "display": "none"
+        }],
+        "stepsB": [{
+          "display": "flex"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".show-abc",
+        "stepsA": [{
+          "display": "flex"
+        }],
+        "stepsB": [{
+          "display": "none"
+        }]
+      }]
+    }
+  },
+  {
+    "slug": "numerical-keyboard",
+    "name": "numerical keyboard",
+    "value": {
+      "style": {
+        "display": "none"
+      },
+      "triggers": []
+    }
+  },
+  {
+    "slug": "show-main-keyboard",
+    "name": "show main keyboard",
+    "value": {
+      "style": {},
+      "triggers": [{
+        "type": "click",
+        "selector": ".buttons-and-main-keyboard-wrapper",
+        "stepsA": [{
+          "display": "block"
+        }, {
+          "opacity": 1,
+          "height": "auto",
+          "transition": "height 250ms ease 0, opacity 500ms ease 0"
+        }],
+        "stepsB": [{
+          "display": "block"
+        }, {
+          "opacity": 1,
+          "height": "auto",
+          "transition": "height 250ms ease 0, opacity 500ms ease 0"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".input-text",
+        "stepsA": [{
+          "display": "block"
+        }, {
+          "opacity": 1,
+          "width": "auto",
+          "transition": "opacity 250ms ease 0, width 250ms ease 0"
+        }],
+        "stepsB": [{
+          "display": "block"
+        }, {
+          "opacity": 1,
+          "width": "auto",
+          "transition": "opacity 250ms ease 0, width 250ms ease 0"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".placeholder-n-recommendation-text",
+        "stepsA": [{
+          "display": "none"
+        }, {
+          "opacity": 0,
+          "transition": "opacity 250ms ease 0"
+        }],
+        "stepsB": [{
+          "display": "none"
+        }, {
+          "opacity": 0,
+          "transition": "opacity 250ms ease 0"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".message-list",
+        "stepsA": [{
+          "opacity": 0.25,
+          "transition": "opacity 250ms ease 0"
+        }],
+        "stepsB": [{
+          "opacity": 0.25,
+          "transition": "opacity 250ms ease 0"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".pop-up-wrapper",
+        "stepsA": [{
+          "wait": "1000ms"
+        }, {
+          "display": "flex"
+        }, {
+          "opacity": 1,
+          "height": "auto",
+          "transition": "height 250ms ease 0, opacity 500ms ease 0"
+        }, {
+          "wait": "2500ms"
+        }, {
+          "opacity": 0,
+          "height": "0px",
+          "transition": "height 250ms ease 0, opacity 125ms ease 0"
+        }, {
+          "display": "none"
+        }],
+        "stepsB": [{
+          "wait": "1000ms"
+        }, {
+          "display": "flex"
+        }, {
+          "opacity": 1,
+          "height": "auto",
+          "transition": "height 250ms ease 0, opacity 500ms ease 0"
+        }, {
+          "wait": "2500ms"
+        }, {
+          "opacity": 0,
+          "height": "0px",
+          "transition": "opacity 125ms ease 0, height 250ms ease 0"
+        }, {
+          "display": "none"
+        }]
+      }]
+    }
+  },
+  {
+    "slug": "close-main-keyboard",
+    "name": "close main keyboard",
+    "value": {
+      "style": {},
+      "triggers": [{
+        "type": "click",
+        "selector": ".buttons-and-main-keyboard-wrapper",
+        "stepsA": [{
+          "opacity": 0,
+          "height": "0px",
+          "transition": "height 250ms ease 0, opacity 125ms ease 0"
+        }, {
+          "display": "none"
+        }],
+        "stepsB": [{
+          "opacity": 0,
+          "height": "0px",
+          "transition": "height 250ms ease 0, opacity 125ms ease 0"
+        }, {
+          "display": "none"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".input-text",
+        "stepsA": [{
+          "opacity": 0,
+          "width": "0px",
+          "transition": "opacity 250ms ease 0, width 250ms ease 0"
+        }, {
+          "display": "none"
+        }],
+        "stepsB": [{
+          "opacity": 0,
+          "width": "0px",
+          "transition": "opacity 250ms ease 0, width 250ms ease 0"
+        }, {
+          "display": "none"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".placeholder-n-recommendation-text",
+        "stepsA": [{
+          "opacity": 1,
+          "transition": "opacity 250ms ease 0"
+        }, {
+          "display": "block"
+        }],
+        "stepsB": [{
+          "opacity": 1,
+          "transition": "opacity 250ms ease 0"
+        }, {
+          "display": "block"
+        }]
+      }, {
+        "type": "click",
+        "selector": ".message-list",
+        "stepsA": [{
+          "opacity": 1,
+          "transition": "opacity 250ms ease 0"
+        }],
+        "stepsB": [{
+          "opacity": 1,
+          "transition": "opacity 250ms ease 0"
+        }]
+      }]
+    }
+  },
+  {
+    "slug": "pop-up-wrapper",
+    "name": "pop up wrapper",
+    "value": {
+      "style": {
+        "display": "none",
+        "opacity": 0,
+        "height": "0px"
+      },
+      "triggers": []
+    }
+  }
 ]);

@@ -542,7 +542,21 @@ ul {
   transition: all 250ms ease;
   text-transform: none;
   white-space: pre;
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow: hidden;
 }
+
+#commands {
+    font-size: 24px;
+    padding: 10px;
+    color: #ff006c;
+    text-shadow: 0px 0px 0px #000;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
 .input-text.command {
     color: #ff006c;
     font-weight: 700;
